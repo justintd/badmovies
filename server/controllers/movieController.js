@@ -46,7 +46,6 @@ module.exports = {
       .catch(err => console.log(err));
   },
   deleteMovie: (req, res) => {
-    console.log(req.body); // Remove this
     mongo.db
       .collection("favoriteMovies")
       .deleteOne({ id: req.body.id })
